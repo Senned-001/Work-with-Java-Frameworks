@@ -10,33 +10,7 @@
         http://www.springframework.org/schema/util
         https://www.springframework.org/schema/util/spring-util.xsd">
 
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
-
-    <bean id="musicBean"
-        class="senned.ClassicalMusic"
-        init-method="doMyInit"
-        destroy-method="doMyDestroy">
-    </bean>
-    <bean id="musicBean2"
-          class="senned.RockMusic">
-    </bean>
-    <bean id="musicBean3"
-          class="senned.RapMusic"
-          factory-method="getRapMusic">
-    </bean>
+    <context:component-scan base-package="configWithAnnotations"/>
 
 
-    <util:list id="kindsOfMusics" value-type="senned.Music">
-        <ref bean="musicBean"/>
-        <ref bean="musicBean2"/>
-        <ref bean="musicBean3"/>
-    </util:list>
-
-    <bean id="musicPlayer"
-        class="senned.MusicPlayer">
-        <property name="music" ref="musicBean"/>
-        <property name="kindsOfMusic" ref="kindsOfMusics"/>
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
 </beans>

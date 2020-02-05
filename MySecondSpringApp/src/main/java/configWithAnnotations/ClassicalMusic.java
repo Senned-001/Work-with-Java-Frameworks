@@ -1,5 +1,8 @@
-package senned;
+package configWithAnnotations;
 
+import org.springframework.stereotype.Component;
+
+@Component("musicBean")
 public class ClassicalMusic implements Music{
     public void doMyInit(){
         System.out.println("Doing my initialization");

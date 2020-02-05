@@ -1,4 +1,4 @@
-package senned;
+package configWithAnnotations;
 
 public interface Music {
     String getSong();

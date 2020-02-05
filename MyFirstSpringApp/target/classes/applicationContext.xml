@@ -25,8 +25,6 @@
           factory-method="getRapMusic">
     </bean>
 
-    <context:component-scan base-package="configWithXML"/>
-
     <util:list id="kindsOfMusics" value-type="configWithXML.Music">
         <ref bean="musicBean"/>
         <ref bean="musicBean2"/>

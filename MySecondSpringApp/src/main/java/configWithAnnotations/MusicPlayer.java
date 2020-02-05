@@ -1,4 +1,4 @@
-package senned;
+package configWithAnnotations;
 
 import java.util.List;
 
@@ -6,7 +6,6 @@ public class MusicPlayer {
     private Music music;
     private String name;
     private int volume;
-    private List<Music> kindsOfMusic;
     //IoC
     public MusicPlayer(Music music) {
         this.music = music;
@@ -35,13 +34,7 @@ public class MusicPlayer {
         this.volume = volume;
     }
 
-    public void setKindsOfMusic(List<Music> kindsOfMusic) {
-        this.kindsOfMusic = kindsOfMusic;
-    }
-
     public void playMusic(){
-        for(Music m:this.kindsOfMusic) {
-            System.out.println("Playing: " + m.getSong());
-        }
+        System.out.println("Playing: " + music.getSong());
     }
 }

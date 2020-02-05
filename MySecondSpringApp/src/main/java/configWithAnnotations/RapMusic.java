@@ -1,4 +1,4 @@
-package senned;
+package configWithAnnotations;
 
 public class RapMusic implements Music {
     private RapMusic(){}
