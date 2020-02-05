@@ -13,28 +13,28 @@
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
     <bean id="musicBean"
-        class="configWithXML.ClassicalMusic"
+        class="senned.ClassicalMusic"
         init-method="doMyInit"
         destroy-method="doMyDestroy">
     </bean>
     <bean id="musicBean2"
-          class="configWithXML.RockMusic">
+          class="senned.RockMusic">
     </bean>
     <bean id="musicBean3"
-          class="configWithXML.RapMusic"
+          class="senned.RapMusic"
           factory-method="getRapMusic">
     </bean>
 
-    <context:component-scan base-package="configWithXML"/>
+    <context:component-scan base-package="senned"/>
 
-    <util:list id="kindsOfMusics" value-type="configWithXML.Music">
+    <util:list id="kindsOfMusics" value-type="senned.Music">
         <ref bean="musicBean"/>
         <ref bean="musicBean2"/>
         <ref bean="musicBean3"/>
     </util:list>
 
     <bean id="musicPlayer"
-        class="configWithXML.MusicPlayer">
+        class="senned.MusicPlayer">
         <property name="music" ref="musicBean"/>
         <property name="kindsOfMusic" ref="kindsOfMusics"/>
         <property name="name" value="${musicPlayer.name}"/>
