@@ -10,8 +10,6 @@
         http://www.springframework.org/schema/util
         https://www.springframework.org/schema/util/spring-util.xsd">
 
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
-
     <bean id="musicBean"
         class="configWithXML.ClassicalMusic"
         init-method="doMyInit"
