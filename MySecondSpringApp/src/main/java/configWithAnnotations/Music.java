@@ -1,5 +1,5 @@
 package configWithAnnotations;
 
 public interface Music {
-    String getSong();
+    String[] getSong();
 }
