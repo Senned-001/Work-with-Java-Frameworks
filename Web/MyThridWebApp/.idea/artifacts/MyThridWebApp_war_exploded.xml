@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="MyThridWebApp:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/MyThridWebApp_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="MyThridWebApp/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="MyThridWebApp" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
