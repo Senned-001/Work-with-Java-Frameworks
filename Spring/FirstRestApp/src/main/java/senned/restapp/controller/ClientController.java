@@ -1,11 +1,11 @@
-package senned.firstrestapp.controller;
+package senned.restapp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import senned.firstrestapp.model.Client;
-import senned.firstrestapp.service.ClientService;
+import senned.restapp.model.Client;
+import senned.restapp.service.ClientService;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package senned.firstrestapp.service;
+package senned.restapp.service;
 
 import org.springframework.stereotype.Service;
-import senned.firstrestapp.model.Client;
+import senned.restapp.model.Client;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,10 +11,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 public class ClientServiceImpl implements ClientService {
-    // Хранилище клиентов
+    // repository of clients
     private static final Map<Integer, Client> CLIENT_REPOSITORY_MAP = new HashMap<>();
 
-    // Переменная для генерации ID клиента
+    // field for generation ID of client
     private static final AtomicInteger CLIENT_ID_HOLDER = new AtomicInteger();
 
     @Override
@@ -41,7 +41,6 @@ public class ClientServiceImpl implements ClientService {
             CLIENT_REPOSITORY_MAP.put(id, client);
             return true;
         }
-
         return false;
     }
 

@@ -1,7 +1,6 @@
-package senned.firstrestapp.service;
+package senned.restapp.service;
 
-import senned.firstrestapp.model.Client;
-
+import senned.restapp.model.Client;
 import java.util.List;
 
 public interface ClientService {

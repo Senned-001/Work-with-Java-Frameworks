@@ -1,4 +1,4 @@
-package senned.firstrestapp.model;
+package senned.restapp.model;
 
 public class Client {
     private Integer id;
