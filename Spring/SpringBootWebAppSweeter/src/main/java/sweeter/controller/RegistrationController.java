@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import sweeter.domen.Role;
 import sweeter.domen.User;
 import sweeter.repos.UserRepo;
-
-import javax.persistence.ConstructorResult;
 import java.util.Collections;
 import java.util.Map;
 
