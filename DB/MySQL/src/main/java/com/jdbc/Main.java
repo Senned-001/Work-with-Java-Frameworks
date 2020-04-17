@@ -2,6 +2,11 @@ package com.jdbc;
 
 import java.sql.*;
 
+/**
+ * task:https://www.youtube.com/watch?v=Y08uEfh1gR4&t=407s
+ * App with connect to DB(MySQL+JDBC)
+ */
+
 public class Main {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "кщще";

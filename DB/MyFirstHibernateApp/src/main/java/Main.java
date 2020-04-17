@@ -4,6 +4,11 @@ import services.UserService;
 
 import java.sql.SQLException;
 
+/**
+ * Simple Hibernate App Work with DB(PostgreSQL):
+ * Object-to-DB, Objects-from-DB
+ */
+
 public class Main {
     public static void main(String[] args) throws SQLException {
 
