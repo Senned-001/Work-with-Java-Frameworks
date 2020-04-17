@@ -3,7 +3,7 @@ package configWithXML;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Simple Spring Application with XML config
+ * Simple Spring Application with XML config, init and destroy methods
  */
 
 public class TestSpring {
