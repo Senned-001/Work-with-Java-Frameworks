@@ -15,6 +15,7 @@ import java.util.List;
 
 /**
  task form https://javarush.ru/groups/posts/2253-znakomstvo-s-maven-spring-mysql-hibernate-i-pervoe-crud-prilozhenie-chastjh-1
+ Filmography - CRUD application with DB
  */
 
 @Controller
@@ -37,7 +38,7 @@ public class FilmController {
     }
 
     //get page for editing
-    @RequestMapping(value = "/edit", method = RequestMethod.GET)
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
     public ModelAndView editPage(@PathVariable("id") int id) {
         Film film = filmService.getById(id);
         ModelAndView modelAndView = new ModelAndView();
