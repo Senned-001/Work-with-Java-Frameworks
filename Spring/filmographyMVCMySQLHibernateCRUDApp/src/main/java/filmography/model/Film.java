@@ -1,6 +1,13 @@
 package filmography.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "films")
 public class Film {
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String title;
     private int year;
