@@ -9,6 +9,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
+    <head>
+        <link href="<c:url value="/res/style.css"/>" rel="stylesheet" type="text/css"/>
+    </head>
     <title>FILMS</title>
 </head>
 <body>
@@ -37,9 +40,19 @@
         </tr>
     </c:forEach>
 </table>
+<div class="pages">
+    <c:forEach begin="1" end="${pagesCount}" step="1" varStatus="i">
+        <c:url value="/" var="url">
+            <c:param name="page" value="${i.index}"/>
+        </c:url>
+        <a href="${url}">${i.index}</a>
+    </c:forEach>
+</div>
 
 <h2>Add</h2>
-<c:url value="/add" var="add"/>
-<a href="${add}">Add new film</a>
+<div class="adding">
+    <c:url value="/add" var="add"/>
+    <a href="${add}">Add new film</a>
+</div>
 </body>
 </html>

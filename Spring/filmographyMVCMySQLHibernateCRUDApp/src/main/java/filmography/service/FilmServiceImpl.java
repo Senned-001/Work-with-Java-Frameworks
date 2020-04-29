@@ -21,10 +21,15 @@ public class FilmServiceImpl implements FilmService {
 
     @Override
     @Transactional
-    public List<Film> allFilms() {
-        return filmDAO.allFilms();
+    public List<Film> allFilms(int page) {
+        return filmDAO.allFilms(page);
     }
 
+    @Override
+    @Transactional
+    public int filmsCount(){
+        return filmDAO.filmsCount();
+    }
     @Override
     @Transactional
     public void add(Film film) {

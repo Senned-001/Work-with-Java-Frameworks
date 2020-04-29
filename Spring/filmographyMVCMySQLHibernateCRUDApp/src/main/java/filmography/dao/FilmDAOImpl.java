@@ -18,10 +18,16 @@ public class FilmDAOImpl implements FilmDAO  {
     }
 
     @Override
-    @SuppressWarnings("unchecked")      //for ignoring List<Film>=List<?>
-    public List<Film> allFilms() {      //get all data from table films
+    @SuppressWarnings("unchecked")                                  //for ignoring List<Film>=List<?>
+    public List<Film> allFilms(int page) {      //get all data from table films
         Session session = sessionFactory.getCurrentSession();
-        return session.createQuery("from Film").list();
+        return session.createQuery("from Film").setFirstResult(10 * (page - 1)).setMaxResults(10).list(); //take 10 values from table, starts with page
+    }
+
+    @Override
+    public int filmsCount() {                   //counter for all data in table
+        Session session = sessionFactory.getCurrentSession();
+        return session.createQuery("select count(*) from Film", Number.class).getSingleResult().intValue();
     }
 
     @Override
